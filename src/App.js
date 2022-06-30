@@ -1,7 +1,14 @@
+import { Route, Routes } from "react-router-dom";
+import Nav from "./Components/Shared/Nav";
+import Home from "./Pages/Home";
+
 function App() {
   return (
     <div>
-      <h2>Hello Task Management</h2>
+      <Nav></Nav>
+      <Routes>
+        <Route path="/" element={<Home />} />
+      </Routes>
     </div>
   );
 }
