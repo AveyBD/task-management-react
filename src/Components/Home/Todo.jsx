@@ -27,7 +27,7 @@ const Todo = ({ refetch }) => {
 
   return (
     <div>
-      <h2 className="text-center text-3xl font-bold">Manage Your Task</h2>
+      <h2 className="text-center text-3xl font-bold mt-2">Manage Your Task</h2>
       <div className="md:w-1/4 w-full mx-auto mt-4">
         <div className="sm:w-full md:w-full">
           <form onSubmit={handleSubmit(onSubmit)}>
