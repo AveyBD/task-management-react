@@ -36,7 +36,8 @@ const List = ({ item, refetch }) => {
         <div class="modal-box">
           <h3 class="font-bold text-lg">Edit Your Task </h3>
           <p class="py-4">
-            haven't found a suitable location to show the input field yet
+            haven't found a suitable location to show the input field yet. But
+            The Update API is present!
           </p>
           <div class="modal-action">
             <label for="editTask" class="btn">
