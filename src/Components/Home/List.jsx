@@ -19,6 +19,16 @@ const List = ({ item, refetch }) => {
         }
       });
   };
+  const handleDelete = (_id) => {
+    fetch(`http://localhost:5000/todo/${_id}`, {
+      method: "DELETE",
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        refetch();
+      });
+  };
   return (
     <div className="flex items-center justify-between gap-1 border border-gray-100 p-1 mt-1">
       <div className="flex items-center gap-2">
@@ -32,7 +42,11 @@ const List = ({ item, refetch }) => {
       </div>
       <div className="flex items-center gap-2">
         <FontAwesomeIcon className="text-green-400" icon={faPen} />
-        <FontAwesomeIcon className="text-red-400" icon={faTrash} />
+        <FontAwesomeIcon
+          onClick={() => handleDelete(item._id)}
+          className="text-red-400"
+          icon={faTrash}
+        />
       </div>
     </div>
   );
