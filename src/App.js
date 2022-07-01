@@ -1,3 +1,4 @@
+import { Toaster } from "react-hot-toast";
 import { Route, Routes } from "react-router-dom";
 import NotFound from "./Components/Shared/404";
 import Nav from "./Components/Shared/Nav";
@@ -8,6 +9,7 @@ import MyCalendar from "./Pages/MyCalendar";
 function App() {
   return (
     <div>
+      <Toaster position="top-right" reverseOrder={false} />
       <Nav></Nav>
       <Routes>
         <Route path="/" element={<Home />} />

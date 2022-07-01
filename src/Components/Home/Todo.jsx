@@ -1,15 +1,28 @@
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
+import toast from "react-hot-toast";
 
 const Todo = ({ refetch }) => {
   const { register, handleSubmit, reset } = useForm();
-  const [task, setTask] = useState("");
   const onSubmit = (data) => {
-    console.log(data.task);
-    setTask(data.task);
+    const newTask = { ...data, complete: false };
+    fetch("http://localhost:5000/todo", {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(newTask),
+    })
+      .then((res) => res.json())
+      .then((result) => {
+        refetch();
+        console.log(result);
+        if (result.success === true) {
+          toast.success("Task has been added!");
+        }
+      });
     reset();
     refetch();
-    console.log(refetch);
   };
 
   return (
