@@ -12,7 +12,11 @@ const List = ({ item, refetch }) => {
       .then((result) => {
         console.log(result);
         refetch();
-        toast.success("Move To Completed Section");
+        if (result.modifiedCount > 0) {
+          toast.success("Move To Completed Section");
+        } else {
+          toast.error("You can't change a completed task");
+        }
       });
   };
   return (
