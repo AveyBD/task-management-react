@@ -22,6 +22,7 @@ const List = ({ item, refetch }) => {
           type="checkbox"
           onChange={() => complete(item._id)}
           className="checkbox checkbox-xs"
+          checked={item.complete}
         />
         <h2 className="">{item.task}</h2>
       </div>
