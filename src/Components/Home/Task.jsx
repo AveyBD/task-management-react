@@ -1,13 +1,16 @@
-import React from 'react';
+import React from "react";
+import Loading from "../Shared/Loading";
 
-const Task = ({_id, task}) => {
-    return (
-        <div className='flex'>
-            <input type="checkbox" name="" id={_id} />
-            <h2>{task}</h2>
-            
-        </div>
-    );
+const Task = ({ data, isLoading }) => {
+  if (isLoading) {
+    return <Loading></Loading>;
+  }
+  console.log(data);
+  return (
+    <div>
+      <h2>Hello</h2>
+    </div>
+  );
 };
 
 export default Task;
