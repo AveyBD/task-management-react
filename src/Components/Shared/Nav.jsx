@@ -12,10 +12,10 @@ const Nav = () => {
       <div className="flex-none">
         <ul className="menu menu-horizontal p-0">
           <li>
-            <Link to={"/"}>To Do</Link>
+            <Link to={"/"}>ToDo</Link>
           </li>
           <li>
-            <Link to={"/completed"}>Completed Task</Link>
+            <Link to={"/completed"}>Completed</Link>
           </li>
           <li>
             <Link to={"/calendar"}>Calender</Link>

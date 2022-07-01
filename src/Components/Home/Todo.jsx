@@ -1,10 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 
 const Todo = () => {
   const { register, handleSubmit, reset } = useForm();
+  const [task, setTask] = useState("");
+  const [todo, setTodo] = useState([]);
   const onSubmit = (data) => {
-    console.log(data);
+    console.log(data.task);
+    setTask(data.task);
     reset();
   };
   return (
