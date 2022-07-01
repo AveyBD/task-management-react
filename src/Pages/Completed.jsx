@@ -9,7 +9,7 @@ const Completed = () => {
     data: done,
     refetch: doneFetch,
   } = useQuery("doneList", () =>
-    fetch("http://localhost:5000/done").then((res) => res.json())
+    fetch("https://fantasktics.herokuapp.com/done").then((res) => res.json())
   );
   if (loading) {
     return <Loading></Loading>;

@@ -6,7 +6,7 @@ const Todo = ({ refetch }) => {
   const { register, handleSubmit, reset } = useForm();
   const onSubmit = (data) => {
     const newTask = { ...data, complete: false };
-    fetch("http://localhost:5000/todo", {
+    fetch("https://fantasktics.herokuapp.com/todo", {
       method: "POST",
       headers: {
         "content-type": "application/json",

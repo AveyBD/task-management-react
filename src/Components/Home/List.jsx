@@ -5,7 +5,7 @@ import toast from "react-hot-toast";
 
 const List = ({ item, refetch }) => {
   const complete = (_id) => {
-    fetch(`http://localhost:5000/todo/${_id}`, {
+    fetch(`https://fantasktics.herokuapp.com/todo/${_id}`, {
       method: "PUT",
     })
       .then((res) => res.json())
@@ -20,7 +20,7 @@ const List = ({ item, refetch }) => {
       });
   };
   const handleDelete = (_id) => {
-    fetch(`http://localhost:5000/todo/${_id}`, {
+    fetch(`https://fantasktics.herokuapp.com/todo/${_id}`, {
       method: "DELETE",
     })
       .then((res) => res.json())

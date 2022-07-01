@@ -7,7 +7,7 @@ import Loading from "../Components/Shared/Loading";
 
 const Home = () => {
   const { isLoading, error, data, refetch } = useQuery("taskList", () =>
-    fetch("http://localhost:5000/todo").then((res) => res.json())
+    fetch("https://fantasktics.herokuapp.com/todo").then((res) => res.json())
   );
 
   const {
@@ -15,7 +15,7 @@ const Home = () => {
     data: done,
     refetch: doneFetch,
   } = useQuery("doneList", () =>
-    fetch("http://localhost:5000/done").then((res) => res.json())
+    fetch("https://fantasktics.herokuapp.com/done").then((res) => res.json())
   );
 
   if (isLoading || loading) {
