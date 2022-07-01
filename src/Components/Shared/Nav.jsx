@@ -6,7 +6,7 @@ const Nav = () => {
     <div className="navbar bg-base-100 border-b-[1px]">
       <div className="flex-1">
         <Link to={"/"} className="btn btn-ghost normal-case text-xl">
-          FanTasktic Manager
+          FanTasktic
         </Link>
       </div>
       <div className="flex-none">

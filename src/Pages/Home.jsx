@@ -1,9 +1,10 @@
 import React from 'react';
+import Todo from '../Components/Home/Todo';
 
 const Home = () => {
     return (
         <div>
-            <h2 className='text-center text-3xl font-bold'>Manage Your Task</h2>
+            <Todo/>
         </div>
     );
 };
