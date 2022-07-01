@@ -2,7 +2,7 @@ import { Toaster } from "react-hot-toast";
 import { Route, Routes } from "react-router-dom";
 import NotFound from "./Components/Shared/404";
 import Nav from "./Components/Shared/Nav";
-import Done from "./Pages/Done";
+import Completed from "./Pages/Completed";
 import Home from "./Pages/Home";
 import MyCalendar from "./Pages/MyCalendar";
 
@@ -13,7 +13,7 @@ function App() {
       <Nav></Nav>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/completed" element={<Done />} />
+        <Route path="/completed" element={<Completed />} />
         <Route path="/calendar" element={<MyCalendar />} />
         <Route path="/*" element={<NotFound />} />
       </Routes>
